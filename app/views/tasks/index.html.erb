@@ -1,0 +1,17 @@
+<h2>Here is a list of all your tasks for the day:</h2>
+<p>
+  <% incomplete= [] %>
+  <% @list_o_tasks.map do |k,v| %>
+    <% if v[1] == false %>
+      <% incomplete << v %>
+    <% else %>
+      <%= "Completed tasks: \n#{v[0]} on #{v[2]}" %>
+    <% end %>
+  <% end %>
+
+  <p>Incomplete tasks:
+
+  <%incomplete.each do |task| %>
+    <p><%= "#{task[0]}" %> </p>
+  <% end %>
+</p>
