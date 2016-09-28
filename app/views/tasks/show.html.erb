@@ -1,2 +1,14 @@
 <h3>Detailed Task Page:</h3>
-<h5>Task name:</h5>
+
+<h4>Task name:</h4>
+  <p><%= @task.name %> </p>
+<h4>Task description:</h4>
+  <p><%= @task.description %></p>
+<h4>Task completed date:</h4>
+  <p>
+    <% if @task.completed_at == nil%>
+    <%= "DOESN'T EXIST BECAUSE YOU HAVEN'T DONE IT YET." %>
+    <% else %>
+    <%= "#{@task.completed_at}" %>
+    <% end %>
+  </p>
