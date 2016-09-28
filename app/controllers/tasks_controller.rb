@@ -10,12 +10,11 @@ class TasksController < ApplicationController
   def new; end
 
   def create
-    
-    redirect_to tasks_path
+    Task.create({name: params[:name], description: params[:description], completed_at:params[:date]})
+    redirect_to root_path
   end
 
   def destroy
-
   end
 
 end
