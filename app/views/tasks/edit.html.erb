@@ -1,12 +1,12 @@
 <h3>Edit a new task here:</h3>
 
-<%= form_for :task, method: :patch do |f| %>
+<%= form_for @task, :method => :patch do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br>
 
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_field :description, :size => 150%>
   <br>
 
   <%= f.label :completed_at %>

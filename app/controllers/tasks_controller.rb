@@ -7,6 +7,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  ########### NEW CREATE #########################################
+
   def new
     @task = Task.new
   end
@@ -14,13 +16,18 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
 
+    # if @task.update(task_params)
+    #   @task.save
+    #   redirect_to root_path
+    # else
+    #   render :edit
+    # end
+
     redirect_to root_path
   end
 
-  def destroy
-    @task = Task.find(params[:id])
-    @task.destroy
-  end
+  ########## EDIT UPDATE ##########################################
+
 
   def edit      # like "new"
     @task = Task.find(params[:id])
@@ -30,11 +37,21 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
-      redirect_to tasks_path
+      # @task.save
+      redirect_to root_path
     else
       render :edit
     end
   end
+
+  ####################################################
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+  end
+
+  ###################### PRIVATE ##############################
 
   private
 
