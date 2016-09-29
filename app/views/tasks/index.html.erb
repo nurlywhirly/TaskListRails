@@ -2,12 +2,13 @@
 
 <p>
   <% @task_list.each do |v| %>
-    <% if v.completed_at == nil %>
-      <p><%="Incomplete task: #{v.name}" %></p>
+    <% if task_completed?(v) == false %>
+      <p><%="Incomplete task: #{v.name}" %> <small><%= link_to "[Edit]", task_edit_path(v) %> </small></p>
     <% else %>
-      <p><%= "Complete task: #{v.name} on #{v.completed_at.month}/#{v.completed_at.day}/#{v.completed_at.year}" %></p>
+      <p><%= "Complete task: #{v.name} on #{v.completed_at.month}/#{v.completed_at.day}/#{v.completed_at.year}" %> <small><%= link_to "[Edit]", task_edit_path(v) %> </small></p>
     <% end %>
   <% end %>
 </p>
 
 <h3><%= link_to "Click here to create a new task!", tasks_new_path %></h3>
+<!--  line 14 should be in the iterator -->

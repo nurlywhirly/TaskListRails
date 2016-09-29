@@ -1,6 +1,6 @@
-<h3>Enter a new task here:</h3>
+<h3>Edit a new task here:</h3>
 
-<%= form_for :task do |f| %>
+<%= form_for :task, method: :patch do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br>
@@ -13,7 +13,7 @@
   <%= f.date_field :completed_at %>
   <br>
 
-  <%= f.submit "Submit your task" %>
+  <%= f.submit "Submit your edits" %>
   <br>
 
 <% end %>
