@@ -8,7 +8,6 @@ class TasksController < ApplicationController
   end
 
   ########### NEW CREATE #########################################
-
   def new
     @task = Task.new
   end
@@ -27,8 +26,6 @@ class TasksController < ApplicationController
   end
 
   ########## EDIT UPDATE ##########################################
-
-
   def edit      # like "new"
     @task = Task.find(params[:id])
   end

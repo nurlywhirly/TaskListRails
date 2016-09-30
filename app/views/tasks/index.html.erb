@@ -5,15 +5,17 @@
     <% if task_completed?(v) == false %>
       <p>
         <%="Incomplete task: #{v.name}" %>
+        <small><%= link_to "[Details]", task_path(v) %> </small>
         <small><%= link_to "[Edit]", task_edit_path(v) %> </small>
       </p>
     <% else %>
       <p>
-        <%= "Complete task: #{v.name} on #{v.completed_at.month}/#{v.completed_at.day}/#{v.completed_at.year}" %>
+        <%= "Complete task: #{v.name} on #{ formatted_date(v) }." %>
+        <small><%= link_to "[Details]", task_path(v) %> </small>
         <small><%= link_to "[Edit]", task_edit_path(v) %> </small>
       </p>
     <% end %>
   <% end %>
 </p>
 
-<h3><%= link_to "Click here to create a new task!", tasks_new_path %></h3>
+<h3><%= link_to "Click here to create a new task!", task_new_path %></h3>

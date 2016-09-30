@@ -1,14 +1,14 @@
-<h3>Detailed Task Page:</h3>
+<h3>--Detailed Task Page--</h3>
 
-<h4>Task name:</h4>
-  <p><%= @task.name %> </p>
-<h4>Task description:</h4>
-  <p><%= @task.description %></p>
-<h4>Task completed date:</h4>
-  <p>
-    <% if @task.completed_at == nil%>
-    <%= "DOESN'T EXIST BECAUSE YOU HAVEN'T DONE IT YET." %>
+<p><strong>Task name:</strong> <%= @task.name.capitalize %> </p>
+<p><strong>Task description:</strong> <%= @task.description %></p>
+<p><strong>Task completed date:</strong>
+    <% if task_completed?(@task) == false %>
+      <%= "DOESN'T EXIST BECAUSE YOU HAVEN'T DONE IT YET." %>
     <% else %>
-    <%= "#{@task.completed_at}" %>
+      <%= "#{ formatted_date(@task) }" %>
     <% end %>
-  </p>
+</p>
+<br>
+<%= button_to "Delete this record", {:controller => :tasks,
+      :action => 'destroy', :id => @task.id }, :method => :delete %>

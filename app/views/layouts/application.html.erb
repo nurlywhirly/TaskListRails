@@ -10,8 +10,10 @@
   <header>
     <h1>Task List</h1>
   </header>
-
-<%= yield %>
+  
+  <article class="page-body">
+    <%= yield %>
+  </article>
 
   <footer>&copy<%=Time.now.year%></footer>
 </body>

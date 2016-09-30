@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root 'tasks#index'
 
   get '/tasks' => 'tasks#index', as: 'tasks'
-  get '/tasks/new' => 'tasks#new'
-  get '/tasks/:id' => 'tasks#show', as: 'task_show'
+  get '/tasks/new' => 'tasks#new', as: 'task_new'
+  get '/tasks/:id' => 'tasks#show', as: 'task'
 
   get '/tasks/:id/edit' => 'tasks#edit', as: 'task_edit'
   patch '/tasks/:id' => 'tasks#update', as: 'task_update'
