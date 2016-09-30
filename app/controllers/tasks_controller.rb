@@ -7,7 +7,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-  ########### NEW CREATE #########################################
+  ##### NEW CREATE #############################################
   def new
     @task = Task.new
   end
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
-  ########## EDIT UPDATE ##########################################
+  ##### EDIT UPDATE #############################################
   def edit      # like "new"
     @task = Task.find(params[:id])
   end
@@ -41,12 +41,15 @@ class TasksController < ApplicationController
     end
   end
 
-  ####################################################
+  #####  DESTROY  ###############################################
 
   def destroy
-    @task = Task.find(params[:id])
-    @task.destroy
+    @task = Task.find(params[:id]).destroy
   end
+
+  # def confirm_deletion      # Way A deletion method - create a confirm_deletion.html.erb with a link_to with method: :delete
+  #   @task = Task.find(params[:id])
+  # end
 
   ###################### PRIVATE ##############################
 

@@ -9,6 +9,11 @@
       <%= "#{ formatted_date(@task) }" %>
     <% end %>
 </p>
+
+<br>
+
+<%= button_to "Back home" %>
+
 <br>
 <%= button_to "Delete this record", {:controller => :tasks,
       :action => 'destroy', :id => @task.id }, :method => :delete %>
