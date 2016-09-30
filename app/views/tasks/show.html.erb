@@ -3,17 +3,17 @@
 <p><strong>Task name:</strong> <%= @task.name.capitalize %> </p>
 <p><strong>Task description:</strong> <%= @task.description %></p>
 <p><strong>Task completed date:</strong>
-    <% if task_completed?(@task) == false %>
-      <%= "DOESN'T EXIST BECAUSE YOU HAVEN'T DONE IT YET." %>
-    <% else %>
+    <% if task_completed?(@task) %>
       <%= "#{ formatted_date(@task) }" %>
+    <% else %>
+      <%= "DOESN'T EXIST BECAUSE YOU HAVEN'T DONE IT YET." %>
     <% end %>
 </p>
 
 <br>
 
-<%= button_to "Back home" %>
+<p><%= link_to "Back home", root_path %></p>
 
 <br>
 <%= button_to "Delete this record", {:controller => :tasks,
-      :action => 'destroy', :id => @task.id }, :method => :delete %>
+      :action => 'destroy', :id => @task.id }, :method => :delete, data: { confirm: "Really, now?" } %>

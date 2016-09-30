@@ -1,29 +1,39 @@
 <h2>Here is a list of all your tasks:</h2>
 
 <h4>To Do:</h4>
-<ul>
-<% Task.all_incompletes.each do |v| %>
-  <li><p>
-    <%= "#{v.name.capitalize}" %>
-    <small><%= link_to "[Details]", task_path(v) %>
-    <%= link_to "[Edit]", task_edit_path(v) %>
-    <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
-  </p></li>
+<ul><% Task.all_incompletes.each do |v| %>
+  <li>
+    <p> <%= "#{ v.name.capitalize}" %> </p>
+    <ul>
+      <li>
+        <%= form_tag task_complete_path(v), method: :patch do %>
+          <%= submit_tag "DID IT!" %>
+          <% end %>
+      </li>
+      <li><small><%= link_to "[Details]", task_path(v) %>
+        <%= link_to "[Edit]", task_edit_path(v) %>
+        <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
+      </li>
+    </ul>
+  </li>
 <% end %>
 </ul>
 
 <h4>Completed Tasks:</h4>
-<ul>
-<% Task.all_completes.each do |v| %>
-  <li><p>
-    <%= "#{ v.name.capitalize}  (on #{ formatted_date(v) })" %>
-    <small><%= link_to "[Details]", task_path(v) %>
-    <%= link_to "[Edit]", task_edit_path(v) %>
-    <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
-  </p></li>
+<ul><% Task.all_completes.each do |v| %>
+  <li>
+    <p> <%= "#{ v.name.capitalize}  (on #{ formatted_date(v) })" %> </p>
+    <ul>
+      <li>
+        <small><%= link_to "[Details]", task_path(v) %>
+        <%= link_to "[Edit]", task_edit_path(v) %>
+        <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
+      </li>
+    </ul>
+  </li>
 <% end %>
 </ul>
 
 <br>
 <br>
-<h3><%= link_to "Click here to create a new task!", task_new_path %></h3>
+<h3> <%= link_to "Click here to create a new task!", task_new_path %> </h3>

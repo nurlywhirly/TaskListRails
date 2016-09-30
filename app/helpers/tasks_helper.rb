@@ -10,5 +10,4 @@ module TasksHelper
   def formatted_date(task)
     return "#{task.completed_at.month}/#{task.completed_at.day}/#{task.completed_at.year}"
   end
-
 end
