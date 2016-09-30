@@ -21,3 +21,11 @@
  body article.page-body {
    margin: 10em;
  }
+
+ body article ul ul {
+   list-style: none;
+ }
+
+ body article ul ul li {
+   padding: .5em;
+ }
