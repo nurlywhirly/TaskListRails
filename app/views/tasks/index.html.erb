@@ -1,21 +1,27 @@
 <h2>Here is a list of all your tasks for the day:</h2>
 
-<p>
-  <% @task_list.each do |v| %>
-    <% if task_completed?(v) == false %>
-      <p>
-        <%="Incomplete task: #{v.name}" %>
-        <small><%= link_to "[Details]", task_path(v) %> </small>
-        <small><%= link_to "[Edit]", task_edit_path(v) %> </small>
-      </p>
-    <% else %>
-      <p>
-        <%= "Complete task: #{v.name} on #{ formatted_date(v) }." %>
-        <small><%= link_to "[Details]", task_path(v) %> </small>
-        <small><%= link_to "[Edit]", task_edit_path(v) %> </small>
-      </p>
-    <% end %>
-  <% end %>
-</p>
+<h4>To Do:</h4>
+<ul>
+<% Task.all_incompletes.each do |v| %>
+  <li><p>
+    <%= "#{v.name}" %>
+    <small><%= link_to "[Details]", task_path(v) %> </small>
+    <small><%= link_to "[Edit]", task_edit_path(v) %> </small>
+  </p></li>
+<% end %>
+</ul>
 
+<h4>Completed Tasks:</h4>
+<ul>
+<% Task.all_completes.each do |v| %>
+  <li><p>
+    <%= "#{v.name} (on #{ formatted_date(v) })" %>
+    <small><%= link_to "[Details]", task_path(v) %> </small>
+    <small><%= link_to "[Edit]", task_edit_path(v) %> </small>
+  </p></li>
+<% end %>
+</ul>
+
+<br>
+<br>
 <h3><%= link_to "Click here to create a new task!", task_new_path %></h3>

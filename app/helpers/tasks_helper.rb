@@ -1,6 +1,6 @@
 module TasksHelper
   def task_completed?(object)
-    if object.completed_at.nil? || object.name.nil?
+    if object.completed_at.nil?
       return false
     else
       return true
