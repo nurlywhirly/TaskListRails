@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
   root 'tasks#index'
+  #
+  # get '/tasks' => 'tasks#index', as: 'tasks'
+  # get '/tasks/new' => 'tasks#new', as: 'task_new'
+  # get '/tasks/:id' => 'tasks#show', as: 'task'
+  #
+  # get '/tasks/:id/edit' => 'tasks#edit', as: 'task_edit'
+  # patch '/tasks/:id' => 'tasks#update', as: 'task_update'
+  # patch '/tasks/:id/complete' => 'tasks#complete', as: 'task_complete'
+  #
+  # post '/tasks' => 'tasks#create', as: 'task_create'
+  #
+  # # get '/tasks/:id/destroy', to 'tasks#confirm_deletion', as: 'task_destroy'     # One way (Way A) to safely have a delete
+  # delete '/tasks/:id' => 'tasks#destroy', as: 'task_destroy'
 
-  get '/tasks' => 'tasks#index', as: 'tasks'
-  get '/tasks/new' => 'tasks#new', as: 'task_new'
-  get '/tasks/:id' => 'tasks#show', as: 'task'
-
-  get '/tasks/:id/edit' => 'tasks#edit', as: 'task_edit'
-  patch '/tasks/:id' => 'tasks#update', as: 'task_update'
-  patch '/tasks/:id/complete' => 'tasks#complete', as: 'task_complete'
-
-  post '/tasks' => 'tasks#create', as: 'task_create'
-
-  # get '/tasks/:id/destroy', to 'tasks#confirm_deletion', as: 'task_destroy'     # One way (Way A) to safely have a delete
-  delete '/tasks/:id' => 'tasks#destroy', as: 'task_destroy'
+  resources :task
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

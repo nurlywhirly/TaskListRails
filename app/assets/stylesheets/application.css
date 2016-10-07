@@ -18,6 +18,10 @@
    font-family: monospace;
  }
 
+ header {
+   text-align: center;
+ }
+
  body article.page-body {
    margin: 10em;
  }
