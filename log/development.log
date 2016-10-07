@@ -2791,7 +2791,7 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.5ms)
 
 ActionView::Template::Error (undefined local variable or method `tasks_new_path' for #<#<Class:0x007fe2737da368>:0x007fe2737d2410>
-Did you mean?  task_new_path
+Did you mean?  new_task_path
                task_path
                task_show_path):
     16:   <% end %>
@@ -10973,10 +10973,10 @@ Processing by TasksController#index as HTML
   Rendered tasks/index.html.erb within layouts/application (59.8ms)
 Completed 500 Internal Server Error in 69ms (ActiveRecord: 3.2ms)
 
-ActionView::Template::Error (undefined local variable or method `task_new_path' for #<#<Class:0x007fa872d99488>:0x007fa874d7bdc8>
+ActionView::Template::Error (undefined local variable or method `new_task_path' for #<#<Class:0x007fa872d99488>:0x007fa874d7bdc8>
 Did you mean?  task_index_path
                task_path):
-    1: <h3> <%= link_to "Click here to create a new task!", task_new_path %> </h3>
+    1: <h3> <%= link_to "Click here to create a new task!", new_task_path %> </h3>
     2: 
     3: <br>
     4: 
@@ -11003,10 +11003,10 @@ Processing by TasksController#index as HTML
   Rendered tasks/index.html.erb within layouts/application (24.1ms)
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.1ms)
 
-ActionView::Template::Error (undefined local variable or method `task_new_path' for #<#<Class:0x007fa872d99488>:0x007fa876c62db8>
+ActionView::Template::Error (undefined local variable or method `new_task_path' for #<#<Class:0x007fa872d99488>:0x007fa876c62db8>
 Did you mean?  task_index_path
                task_path):
-    1: <h3> <%= link_to "Click here to create a new task!", task_new_path %> </h3>
+    1: <h3> <%= link_to "Click here to create a new task!", new_task_path %> </h3>
     2: 
     3: <br>
     4: 
@@ -11033,10 +11033,10 @@ Processing by TasksController#index as HTML
   Rendered tasks/index.html.erb within layouts/application (26.4ms)
 Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
 
-ActionView::Template::Error (undefined local variable or method `task_new_path' for #<#<Class:0x007fa872d99488>:0x007fa87311ec98>
+ActionView::Template::Error (undefined local variable or method `new_task_path' for #<#<Class:0x007fa872d99488>:0x007fa87311ec98>
 Did you mean?  task_index_path
                task_path):
-    1: <h3> <%= link_to "Click here to create a new task!", task_new_path %> </h3>
+    1: <h3> <%= link_to "Click here to create a new task!", new_task_path %> </h3>
     2: 
     3: <br>
     4: 
