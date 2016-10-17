@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
   post '/tasks' => 'tasks#create', as: 'task_create'
 
-  # get '/tasks/:id/destroy', to 'tasks#confirm_deletion', as: 'task_destroy'     # One way (Way A) to safely have a delete
   delete '/tasks/:id' => 'tasks#destroy', as: 'task_destroy'
 
+  get '/auth/:provider/callback' => 'sessions#create'
   # resources :task
 
   # The priority is based upon order of creation: first created -> highest priority.

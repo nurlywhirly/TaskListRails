@@ -1,6 +1,10 @@
 class TasksController < ApplicationController
   def index
-    @task_list = Task.all
+    if session[:user_id].nil?
+      redirect_to url('http://localhost:3000/auth/github')
+    else
+      @task_list = Task.all
+    end
   end
 
   def show
@@ -15,12 +19,11 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
 
-    # if @task.update(task_params)
-    #   @task.save
-    #   redirect_to root_path
-    # else
-    #   render :edit
-    # end
+    if @task.update(task_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
 
     redirect_to root_path
   end
@@ -34,7 +37,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
-      # @task.save
       redirect_to root_path
     else
       render :edit
