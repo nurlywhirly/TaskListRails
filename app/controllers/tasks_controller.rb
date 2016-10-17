@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
   def index
     if session[:user_id].nil?
-      redirect_to url('http://localhost:3000/auth/github')
+      redirect_to login_path
+      return
     else
       @task_list = Task.all
     end
