@@ -22,7 +22,11 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def login
+  def login; end
+
+  def logout
+    session.delete(:user_id)
+    redirect_to login_path
   end
 
 end

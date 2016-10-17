@@ -1,21 +1,22 @@
 Rails.application.routes.draw do
   root 'tasks#index'
-
-  get '/tasks' => 'tasks#index', as: 'tasks'
-  get '/tasks/new' => 'tasks#new', as: 'new_task'
-  get '/tasks/:id' => 'tasks#show', as: 'task'
-
-  get '/tasks/:id/edit' => 'tasks#edit', as: 'task_edit'
-  patch '/tasks/:id' => 'tasks#update', as: 'task_update'
+  resources :tasks
+  # get '/tasks' => 'tasks#index', as: 'tasks'
+  # get '/tasks/new' => 'tasks#new', as: 'new_task'
+  # get '/tasks/:id' => 'tasks#show', as: 'task'
+  #
+  # get '/tasks/:id/edit' => 'tasks#edit', as: 'task_edit'
+  # patch '/tasks/:id' => 'tasks#update', as: 'task_update'
   patch '/tasks/:id/complete' => 'tasks#complete', as: 'task_complete'
-
-  post '/tasks' => 'tasks#create', as: 'task_create'
-
-  delete '/tasks/:id' => 'tasks#destroy', as: 'task_destroy'
+  #
+  # post '/tasks' => 'tasks#create', as: 'task_create'
+  #
+  # delete '/tasks/:id' => 'tasks#destroy', as: 'task_destroy'
 
   get '/auth/:provider/callback' => 'sessions#create'
 
   get '/session/login' => 'sessions#login', as: 'login'
+  delete '/sessions/' => 'sessions#destroy', as: 'session_destroy'
   # resources :task
 
   # The priority is based upon order of creation: first created -> highest priority.

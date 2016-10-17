@@ -15,7 +15,7 @@
           <% end %>
       </li>
       <li><small><%= link_to "[Details]", task_path(v) %>
-        <%= link_to "[Edit]", task_edit_path(v) %>
+        <%= link_to "[Edit]", edit_task_path(v) %>
         <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
       </li>
     </ul>
@@ -30,7 +30,7 @@
     <ul>
       <li>
         <small><%= link_to "[Details]", task_path(v) %>
-        <%= link_to "[Edit]", task_edit_path(v) %>
+        <%= link_to "[Edit]", edit_task_path(v) %>
         <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
       </li>
     </ul>

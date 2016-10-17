@@ -21,12 +21,10 @@ class TasksController < ApplicationController
     @task = Task.create(task_params)
 
     if @task.update(task_params)
-      redirect_to root_path
+      redirect_to task_path(@task)
     else
       render :edit
     end
-
-    redirect_to root_path
   end
 
   ##### EDIT UPDATE #############################################
@@ -38,7 +36,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
-      redirect_to root_path
+      redirect_to task_path(@task)
     else
       render :edit
     end
@@ -52,14 +50,10 @@ class TasksController < ApplicationController
   end
 
   #####  DESTROY  ###############################################
-
   def destroy
     @task = Task.find(params[:id]).destroy
+    redirect_to tasks_path
   end
-
-  # def confirm_deletion      # Way A deletion method - create a confirm_deletion.html.erb with a link_to with method: :delete
-  #   @task = Task.find(params[:id])
-  # end
 
   ###################### PRIVATE ##############################
 

@@ -9,12 +9,17 @@
 <body>
   <header>
     <h1>Task List</h1>
+    <nav>
+      <ul>
+        <li><%= link_to "Logout", session_destroy_path %></li>
+      </ul>
+    </nav>
   </header>
-  
+
   <article class="page-body">
     <%= yield %>
   </article>
 
-  <footer>&copy<%=Time.now.year%></footer>
+  <footer>&copy <%=Time.now.year%></footer>
 </body>
 </html>
