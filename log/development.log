@@ -11353,3 +11353,110 @@ Did you mean?  create_with):
   Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-17 15:07:15 -0700
+Processing by TasksController#index as HTML
+Redirected to http://localhost:3000/session/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/login" for ::1 at 2016-10-17 15:07:15 -0700
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for ::1 at 2016-10-17 15:07:18 -0700
+
+
+Started GET "/auth/github" for ::1 at 2016-10-17 15:07:18 -0700
+
+
+Started GET "/auth/github/callback?code=d94848386ff835b0a267&state=6c30ac3226c5e032afff1a4c6db2dfe45b8ce2998eec9fb3" for ::1 at 2016-10-17 15:07:19 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"d94848386ff835b0a267", "state"=>"6c30ac3226c5e032afff1a4c6db2dfe45b8ce2998eec9fb3", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 17463068], ["provider", "github"]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+NoMethodError (undefined method `create_from_github' for #<Class:0x007fb6f08e47a8>
+Did you mean?  create_with):
+  app/controllers/sessions_controller.rb:16:in `create'
+
+
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nurl/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.7ms)
+
+
+Started GET "/" for ::1 at 2016-10-17 15:07:52 -0700
+Processing by TasksController#index as HTML
+Redirected to http://localhost:3000/session/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/login" for ::1 at 2016-10-17 15:07:52 -0700
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for ::1 at 2016-10-17 15:07:54 -0700
+
+
+Started GET "/auth/github" for ::1 at 2016-10-17 15:07:55 -0700
+
+
+Started GET "/auth/github/callback?code=65617426cb27e9f7dc6e&state=5738a1e1bd453e2eb7992dc3b55283416296124072ca207b" for ::1 at 2016-10-17 15:07:55 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"65617426cb27e9f7dc6e", "state"=>"5738a1e1bd453e2eb7992dc3b55283416296124072ca207b", "provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 17463068], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 17463068], ["provider", "github"], ["name", "Nicole"], ["email", "nicole.url.4@gmail.com"], ["created_at", "2016-10-17 22:07:56.876540"], ["updated_at", "2016-10-17 22:07:56.876540"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-17 15:07:56 -0700
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."completed_at" IS NULL
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE ("tasks"."completed_at" IS NOT NULL)[0m
+  Rendered tasks/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-17 15:07:56 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-17 15:07:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-17 15:07:56 -0700
+
+
+Started GET "/assets/application.self-2da4dd31ba7c299d3b44bac5a640cb610e6d4203edfd9d57092d9fcf28fe27ea.css?body=1" for ::1 at 2016-10-17 15:07:56 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-17 15:07:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-17 15:07:56 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-17 15:07:57 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-17 15:07:57 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-17 15:07:57 -0700
