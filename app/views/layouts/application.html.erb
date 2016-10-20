@@ -11,7 +11,13 @@
     <h1>Task List</h1>
     <nav>
       <ul>
-        <li><%= link_to "Logout", session_destroy_path %></li>
+        <li>
+          <% if session[:user_id] %>
+            <%= link_to "Logout", session_destroy_path %>
+          <% else %>
+            <%= link_to "Login", login_path %>
+          <% end %>
+        </li>
       </ul>
     </nav>
   </header>

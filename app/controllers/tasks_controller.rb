@@ -1,11 +1,8 @@
 class TasksController < ApplicationController
+  before_action :logged_in?, except: [:update, :create]
+
   def index
-    if session[:user_id].nil?
-      redirect_to login_path
-      return
-    else
-      @task_list = Task.all
-    end
+    @task_list = Task.all
   end
 
   def show
@@ -63,5 +60,10 @@ class TasksController < ApplicationController
     params.require(:task).permit(:name, :description, :completed_at)
     # params.require(:table_name).permit(:field_one, :field_two)
   end
+
+  def logged_in?
+    redirect_to login_path if session[:user_id].nil?
+  end
+
 
 end

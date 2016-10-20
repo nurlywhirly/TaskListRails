@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: [:login, :create]
+
   def index
     if session[:user_id].nil?
       redirect_to login_path
