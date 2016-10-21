@@ -1,13 +1,12 @@
 class TasksController < ApplicationController
   before_action :logged_in?, except: [:update, :create]
+  before_action :find_task, except: [:index, :new, :create]
 
   def index
-    @task_list = Task.all
+    @task_list = user_tasks_only(Task.all)
   end
 
-  def show
-    @task = Task.find(params[:id])
-  end
+  def show; end
 
   ##### NEW CREATE #############################################
   def new
@@ -15,23 +14,18 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
-
-    if @task.update(task_params)
+    if (@task = Task.create(task_params))
+      @task.user_id = session[:user_id]
       redirect_to task_path(@task)
     else
-      render :edit
+      render :new
     end
   end
 
   ##### EDIT UPDATE #############################################
-  def edit      # like "new"
-    @task = Task.find(params[:id])
-  end
+  def edit; end
 
-  def update     # actually does the update, like "create"
-    @task = Task.find(params[:id])
-
+  def update
     if @task.update(task_params)
       redirect_to task_path(@task)
     else
@@ -40,7 +34,6 @@ class TasksController < ApplicationController
   end
 
   def complete
-    @task = Task.find(params[:id])
     @task.completed_at = Date.today
     @task.save
     redirect_to root_path
@@ -57,7 +50,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description, :completed_at)
+    params.require(:task).permit(:name, :description, :completed_at, :user_id)
     # params.require(:table_name).permit(:field_one, :field_two)
   end
 
@@ -65,5 +58,8 @@ class TasksController < ApplicationController
     redirect_to login_path if session[:user_id].nil?
   end
 
+  def find_task
+    @task = Task.find(params[:id])
+  end
 
 end
