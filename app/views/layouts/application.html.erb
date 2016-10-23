@@ -11,10 +11,10 @@
   <header>
     <h1>Task List</h1>
     <nav>
-      <% if session[:user_id] %>
-      <h3><%= link_to "Logout", session_destroy_path %>
+      <% if session[:user_id].nil? %>
+      <h3><%= link_to "Login", "/auth/github/" %></h3>
       <% else %>
-        <%= link_to "Login", "/auth/github" %></h3>
+        <h3><%= link_to "Logout", logout_path, method: :delete %></h3>
       <% end %>
     </nav>
   </header>

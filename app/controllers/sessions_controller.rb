@@ -1,10 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :logged_in?, only: [:login, :create]
 
-  def index
-    redirect_to root_path
-  end
-
   def create
     auth_hash = request.env['omniauth.auth']
     redirect_to login_path unless auth_hash[:uid]
@@ -26,9 +22,9 @@ class SessionsController < ApplicationController
     redirect_to login_path
   end
 
-
   def logout
     session.delete(:user_id)
+    @current_user = nil
   end
 
 end
