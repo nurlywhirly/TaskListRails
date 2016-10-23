@@ -1,11 +1,13 @@
-<h3> <%= link_to "Click here to create a new task!", new_task_path %> </h3>
-
-<h2>Here is a list of all your tasks:</h2>
+<div>
+  <%= link_to new_task_path do %>
+    <div id="new-task-button" class="button"><h3>Click here to create a new task!</h3></div>
+  <% end %>
+</div>
 
 <div class="row">
-  <table class="large-6 small-12 columns">
+  <table class="large-12 small-12 columns">
     <tr>
-      <th colspan="3">
+      <th colspan="3" width="30">
         TO DO
       </th>
     </tr>
@@ -19,19 +21,18 @@
         <% end %>
       </td>
 
-      <td><small>
+      <td>
         <%= link_to "[Details]", task_path(task) %>
         <%= link_to "[Edit]", edit_task_path(task) %>
         <%= link_to "[Delete]", task_path(task), method: :delete, data: { confirm: "Don't be a frickin' slacker." } %>
-      </small></td>
+      </td>
     </tr>
     <% end %>
   </table>
 
-  <table class="large-6 small-12 columns">
-    <tr></tr>
+  <table class="large-12 small-12 columns">
     <tr>
-      <th colspan="2">
+      <th colspan="2" width="30">
         COMPLETED:
       </th>
     </tr>
@@ -42,11 +43,11 @@
         <%= "#{ task.name.capitalize}  (on #{ formatted_date(task) })" %>
       </td>
 
-      <td><small>
+      <td>
         <%= link_to "[Details]", task_path(task) %>
         <%= link_to "[Edit]", edit_task_path(task) %>
         <%= link_to "[Delete]", task_path(task), method: :delete, data: { confirm: "Nice work gettin' that done!" } %>
-      </small></td>
+      </td>
     </tr>
     <% end %>
   </table>

@@ -18,7 +18,7 @@
 
 body {
   text-align: center;
-  background-image: url("http://cdn.wallpapersafari.com/26/80/FJBG4x.jpg");
+  background-color: #d7d7d7;
 }
 
 p, td {
@@ -30,17 +30,35 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 a {
-  color: #cf6d08;
+  color: #1b9e06;
 }
 
 a:hover {
-  color: #9a5207;
+  color: #23cd07;
 }
 
 tr:nth-of-type(odd) {
-  background-color: #949494;
+  background-color: #dadada;
 }
 
 tr:nth-of-type(even) {
   background-color: #dad7d7;
+}
+
+#new-task-button {
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+#new-task-button:hover {
+  background-color: #a2cd9b;
+}
+
+#new-task-button h3 {
+  color: black;
+}
+
+table th {
+  background-color: #a2cd9b;
+  font-size: 2em;
 }

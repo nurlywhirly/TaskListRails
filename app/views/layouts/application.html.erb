@@ -12,9 +12,9 @@
     <h1>Task List</h1>
     <nav>
       <% if session[:user_id] %>
-      <p><%= link_to "Logout", session_destroy_path %>
+      <h3><%= link_to "Logout", session_destroy_path %>
       <% else %>
-        <%= link_to "Login", "/auth/github" %></p>
+        <%= link_to "Login", "/auth/github" %></h3>
       <% end %>
     </nav>
   </header>
