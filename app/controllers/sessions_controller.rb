@@ -2,11 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :logged_in?, only: [:login, :create]
 
   def index
-    if logged_in?
-      redirect_to root_path
-    else
-      redirect_to login_path
-    end
+    redirect_to root_path
   end
 
   def create
@@ -26,15 +22,13 @@ class SessionsController < ApplicationController
 
   def login; end
 
-  def logout
-    session.delete(:user_id)
+  def show
     redirect_to login_path
   end
 
-  private
 
-  def logged_in?
-    redirect_to login_path if session[:user_id].nil?
+  def logout
+    session.delete(:user_id)
   end
 
 end

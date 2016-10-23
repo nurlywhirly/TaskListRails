@@ -1,9 +1,12 @@
 class TasksController < ApplicationController
-  before_action :logged_in?, except: [:update, :create]
+  skip_before_action :logged_in?, only: [:update, :create]
   before_action :find_task, except: [:index, :new, :create]
 
   def index
-    @task_list = user_tasks_only(Task.all)
+    tasks = Task.all.where(user_id: session[:user_id])
+
+    @completed_tasks = tasks.where.not(completed_at: nil)
+    @incompleted_tasks = tasks.where(completed_at: nil)
   end
 
   def show; end
@@ -16,6 +19,7 @@ class TasksController < ApplicationController
   def create
     if (@task = Task.create(task_params))
       @task.user_id = session[:user_id]
+      @task.save
       redirect_to task_path(@task)
     else
       render :new
@@ -52,10 +56,6 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:name, :description, :completed_at, :user_id)
     # params.require(:table_name).permit(:field_one, :field_two)
-  end
-
-  def logged_in?
-    redirect_to login_path if session[:user_id].nil?
   end
 
   def find_task
