@@ -16,22 +16,28 @@
 
 @import url('foundation.css');
 
-html {
-  width: 50%;
-  margin: 0 auto;
-}
 
 body {
+  width: 50%;
   text-align: center;
   background-color: #d7d7d7;
+  margin: 0 auto;
 }
 
 p, td {
   font-family: 'Cabin Condensed', sans-serif;
+  font-size: 1.25em;
 }
 
 h1, h2, h3, h4, h5, h6, th {
   font-family: 'Londrina Solid', cursive;
+}
+
+form * {
+  font-family: 'Cabin Condensed', sans-serif;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 a {
@@ -55,7 +61,16 @@ tr:nth-of-type(even) {
   border-radius: 15px;
 }
 
+div.task-button {
+  background-color: transparent;
+  border-radius: 15px;
+}
+
 #new-task-button:hover {
+  background-color: #a2cd9b;
+}
+
+div.task-button {
   background-color: #a2cd9b;
 }
 
@@ -66,4 +81,19 @@ tr:nth-of-type(even) {
 table th {
   background-color: #a2cd9b;
   font-size: 2em;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+div p {
+  text-align: left;
+}
+
+header {
+  background-color: #a2cd9b;
 }

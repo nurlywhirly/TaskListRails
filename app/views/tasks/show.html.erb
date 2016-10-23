@@ -1,19 +1,23 @@
-<h3>--Detailed Task Page--</h3>
+<h2><%= @task.name %></h2>
+<div>
+  <p><strong>Task name:</strong> <%= @task.name.capitalize %> </p>
+  <p><strong>Task description:</strong> <%= @task.description %></p>
+  <% if task_completed?(@task) %>
+    <p><strong>Task completed date:</strong>
+    <%= "#{ formatted_date(@task) }" %></p>
+  <% end %>
+</div>
 
-<p><strong>Task name:</strong> <%= @task.name.capitalize %> </p>
-<p><strong>Task description:</strong> <%= @task.description %></p>
-<p><strong>Task completed date:</strong>
-    <% if task_completed?(@task) %>
-      <%= "#{ formatted_date(@task) }" %>
-    <% else %>
-      <%= "DOESN'T EXIST BECAUSE YOU HAVEN'T DONE IT YET." %>
-    <% end %>
-</p>
+<div class="button" id="new-task-button">
+  <%= link_to root_path do %>
+    <h5>Back home</h5>
+  <% end %>
+</div>
 
 <br>
 
-<p><%= link_to "Back home", root_path %></p>
-
-<br>
-<%= button_to "Delete this record", {:controller => :tasks,
-      :action => 'destroy', :id => @task.id }, :method => :delete, data: { confirm: "Really, now?" } %>
+<div class="button" id="new-task-button">
+  <%= link_to task_path(@task), :method => :delete, data: { confirm: "Is this really the right decision?" } do %>
+    <h5>Delete task</h5>
+  <% end %>
+</div>
