@@ -38,8 +38,9 @@ group :development, :test do
   # gem 'pry'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'pg'
+  # gem 'pg'
   gem 'dotenv-rails'
+  gem 'better_errors'
 end
 
 group :development do
