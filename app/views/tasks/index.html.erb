@@ -1,39 +1,54 @@
 <h3> <%= link_to "Click here to create a new task!", new_task_path %> </h3>
 
-<br>
-
 <h2>Here is a list of all your tasks:</h2>
 
-<h4>To Do:</h4>
-<ul><% Task.all_incompletes.each do |v| %>
-  <li>
-    <p> <%= "#{ v.name.capitalize}" %> </p>
-    <ul>
-      <li>
-        <%= form_tag task_complete_path(v), method: :patch do %>
-          <%= submit_tag "DID IT!" %>
-          <% end %>
-      </li>
-      <li><small><%= link_to "[Details]", task_path(v) %>
-        <%= link_to "[Edit]", edit_task_path(v) %>
-        <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
-      </li>
-    </ul>
-  </li>
-<% end %>
-</ul>
+<div class="row">
+  <table class="large-6 small-12 columns">
+    <tr>
+      <th colspan="3">
+        TO DO
+      </th>
+    </tr>
 
-<h4>Completed Tasks:</h4>
-<ul><% Task.all_completes.each do |v| %>
-  <li>
-    <p> <%= "#{ v.name.capitalize}  (on #{ formatted_date(v) })" %> </p>
-    <ul>
-      <li>
-        <small><%= link_to "[Details]", task_path(v) %>
-        <%= link_to "[Edit]", edit_task_path(v) %>
-        <%= link_to "[Delete]", task_path(v), method: :delete, data: { confirm: "Really, now?" } %> </small>
-      </li>
-    </ul>
-  </li>
-<% end %>
-</ul>
+    <% @incompleted_tasks.each do |task| %>
+    <tr>
+      <td><%= "#{ task.name.capitalize}" %></td>
+      <td>
+        <%= form_tag task_complete_path(task), method: :patch do %>
+          <%= submit_tag "Completed!" %>
+        <% end %>
+      </td>
+
+      <td><small>
+        <%= link_to "[Details]", task_path(task) %>
+        <%= link_to "[Edit]", edit_task_path(task) %>
+        <%= link_to "[Delete]", task_path(task), method: :delete, data: { confirm: "Don't be a frickin' slacker." } %>
+      </small></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <table class="large-6 small-12 columns">
+    <tr></tr>
+    <tr>
+      <th colspan="2">
+        COMPLETED:
+      </th>
+    </tr>
+
+    <% @completed_tasks.each do |task| %>
+    <tr>
+      <td>
+        <%= "#{ task.name.capitalize}  (on #{ formatted_date(task) })" %>
+      </td>
+
+      <td><small>
+        <%= link_to "[Details]", task_path(task) %>
+        <%= link_to "[Edit]", edit_task_path(task) %>
+        <%= link_to "[Delete]", task_path(task), method: :delete, data: { confirm: "Nice work gettin' that done!" } %>
+      </small></td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

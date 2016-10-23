@@ -5,20 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Solid|Rajdhani" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Task List</h1>
     <nav>
-      <ul>
-        <li>
-          <% if session[:user_id] %>
-            <%= link_to "Logout", session_destroy_path %>
-          <% else %>
-            <%= link_to "Login", login_path %>
-          <% end %>
-        </li>
-      </ul>
+      <% if session[:user_id] %>
+      <p><%= link_to "Logout", session_destroy_path %>
+      <% else %>
+        <%= link_to "Login", "/auth/github" %></p>
+      <% end %>
     </nav>
   </header>
 
