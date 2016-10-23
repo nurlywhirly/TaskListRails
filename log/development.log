@@ -13960,3 +13960,577 @@ Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dd
 
 
 Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:36:43 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:43:04 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 80ms (Views: 79.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/application.self-1d00a7f4196433e456311785eb91a50b6ed4df59e120ee17b326a089564f9d0b.css?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:43:04 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:44:23 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 85ms (Views: 84.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/application.self-c888624b5b62a8422d9f2a02c1717cdec3c2de34e14b6420cf62dd81b0d672cc.css?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:44:23 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:45:56 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/application.self-fe6c5dc6d0b4a2f206f6b3dc398a30fec3ba5cb2f7fc3beaee60de58b3088abf.css?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:45:56 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:46:56 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/application.self-7423dafae0c00b8777768d6dc868657eadca7eac9d2935343ff97cf4b7ad5e27.css?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:46:56 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:47:28 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/application.self-f6be7d782e3e43bfe870e44e0e7f34357d69b11e68e8e796ef2fbb83487bb3ee.css?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:47:28 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:47:53 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/application.self-ce3e4035c2ccd9d96732d3de8d65ed5a7e24f7ab8277269c3b7c2484c3620698.css?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:47:53 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:48:19 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/application.self-8fccf7d168f67b200857eea82a114c9b6fef4ce0cf59b62d0b7a984bdc1108e5.css?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:48:20 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:48:52 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/application.self-06bb9b0e145a5a6709b70dabb11cb2f56da28b46e9e829d3e302d3cf1bc2de28.css?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:48:52 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:49:57 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/application.self-1c66c97ed637a1542583bff51842b21b147c96ce1dc335e751a9fa4615322980.css?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:49:57 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:51:24 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/application.self-33fc52d23dfc26bc42a0f15e461e9833b9fe579ed3ff53b9e14fc2e6e17911c6.css?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:51:24 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:51:41 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/application.self-a0caa13be34a7aa97db342d4db63c48f35e47816cb8b6a4708ae9ab8e4e0b3a8.css?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:51:41 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:52:52 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/application.self-e2790411a4f230464d7d17ba4b9d84e778a2e55f810cdfd4135bd5d0177ba4d5.css?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:52:52 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:53:02 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/application.self-e2790411a4f230464d7d17ba4b9d84e778a2e55f810cdfd4135bd5d0177ba4d5.css?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:53:02 -0700
+
+
+Started GET "/" for ::1 at 2016-10-22 19:54:01 -0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."completed_at" IS NULL[0m  [["user_id", 17463068]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND ("tasks"."completed_at" IS NOT NULL)  [["user_id", 17463068]]
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 70ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foundation.self-3e90c2b85f33f5573363284db9215e23ea733d4621ae4fa5aed17ba251608f4e.css?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/application.self-66be890edf088d036953f3c368805d63d2203e8a82aa302f3b46a4d4874b353a.css?body=1" for ::1 at 2016-10-22 19:54:01 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-22 19:54:01 -0700

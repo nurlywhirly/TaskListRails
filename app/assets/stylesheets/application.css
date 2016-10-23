@@ -18,12 +18,29 @@
 
 body {
   text-align: center;
+  background-image: url("http://cdn.wallpapersafari.com/26/80/FJBG4x.jpg");
 }
 
 p, td {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Cabin Condensed', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, th {
   font-family: 'Londrina Solid', cursive;
+}
+
+a {
+  color: #cf6d08;
+}
+
+a:hover {
+  color: #9a5207;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #949494;
+}
+
+tr:nth-of-type(even) {
+  background-color: #dad7d7;
 }
