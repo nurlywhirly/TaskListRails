@@ -16,6 +16,11 @@
 
 @import url('foundation.css');
 
+html {
+  width: 50%;
+  margin: 0 auto;
+}
+
 body {
   text-align: center;
   background-color: #d7d7d7;
