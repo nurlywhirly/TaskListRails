@@ -25,6 +25,13 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
+  # I feel I am a bit off with this one
+  # test "A non-logged-in user is redirected to login_path" do
+  #   login_a_user
+  #   redirect_to_url("/tasks")
+  #   assert_template :login
+  # end
+
   test "logging out nils the current user" do
     login_a_user
     get :logout
