@@ -18,10 +18,6 @@ class SessionsController < ApplicationController
 
   def login; end
 
-  def show
-    redirect_to login_path
-  end
-
   def logout
     session.delete(:user_id)
     @current_user = nil

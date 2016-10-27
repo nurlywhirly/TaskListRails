@@ -1,0 +1,1119 @@
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "completed_at" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "uid" integer NOT NULL, "provider" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (3.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161021050520')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160928205345')
+  [1m[36m (3.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160928210351')[0m
+  [1m[35m (3.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161017213941')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35m (5.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tasks"
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:16:33', '2016-10-26 16:16:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:16:33', '2016-10-26 16:16:33', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:16:33', '2016-10-26 16:16:33', 980190962)[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:16:33', '2016-10-26 16:16:33', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:16:33', '2016-10-26 16:16:33', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:16:33', '2016-10-26 16:16:33', 980190962)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:25:16', '2016-10-26 16:25:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:25:16', '2016-10-26 16:25:16', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:25:16', '2016-10-26 16:25:16', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:25:16', '2016-10-26 16:25:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:25:16', '2016-10-26 16:25:16', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:25:16', '2016-10-26 16:25:16', 980190962)
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:23', '2016-10-26 16:27:23', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:23', '2016-10-26 16:27:23', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:27:23', '2016-10-26 16:27:23', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:23', '2016-10-26 16:27:23', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:23', '2016-10-26 16:27:23', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:27:23', '2016-10-26 16:27:23', 980190962)
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:55', '2016-10-26 16:27:55', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:55', '2016-10-26 16:27:55', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:27:55', '2016-10-26 16:27:55', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:55', '2016-10-26 16:27:55', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:27:55', '2016-10-26 16:27:55', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:27:55', '2016-10-26 16:27:55', 980190962)
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:29:07', '2016-10-26 16:29:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:29:07', '2016-10-26 16:29:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:29:07', '2016-10-26 16:29:07', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:29:07', '2016-10-26 16:29:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:29:07', '2016-10-26 16:29:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:29:07', '2016-10-26 16:29:07', 980190962)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:33:27', '2016-10-26 16:33:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:33:27', '2016-10-26 16:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:33:27', '2016-10-26 16:33:27', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:33:27', '2016-10-26 16:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:33:27', '2016-10-26 16:33:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:33:27', '2016-10-26 16:33:27', 980190962)
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:40:42', '2016-10-26 16:40:42', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:40:42', '2016-10-26 16:40:42', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:40:42', '2016-10-26 16:40:42', 980190962)[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "tasks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:40:42', '2016-10-26 16:40:42', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:40:42', '2016-10-26 16:40:42', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:40:42', '2016-10-26 16:40:42', 980190962)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:45:50', '2016-10-26 16:45:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:45:50', '2016-10-26 16:45:50', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:45:50', '2016-10-26 16:45:50', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:49:16', '2016-10-26 16:49:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:49:16', '2016-10-26 16:49:16', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:49:16', '2016-10-26 16:49:16', 980190962)[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:53:05', '2016-10-26 16:53:05', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:53:05', '2016-10-26 16:53:05', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:53:05', '2016-10-26 16:53:05', 980190962)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:56:24', '2016-10-26 16:56:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:56:24', '2016-10-26 16:56:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:56:24', '2016-10-26 16:56:24', 980190962)[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:58:27', '2016-10-26 16:58:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:58:27', '2016-10-26 16:58:27', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:58:27', '2016-10-26 16:58:27', 980190962)[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 16:59:08', '2016-10-26 16:59:08', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 16:59:08', '2016-10-26 16:59:08', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 16:59:08', '2016-10-26 16:59:08', 980190962)[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-26 17:00:54', '2016-10-26 17:00:54', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-26 17:00:54', '2016-10-26 17:00:54', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-10-26 17:00:54', '2016-10-26 17:00:54', 980190962)[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.6ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:09:37', '2016-10-27 02:09:37', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:09:37', '2016-10-27 02:09:37', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:09:38.123465"], ["updated_at", "2016-10-27 02:09:38.123465"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 36ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.5ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.3ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:10:14', '2016-10-27 02:10:14', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:10:14', '2016-10-27 02:10:14', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:10:14.561966"], ["updated_at", "2016-10-27 02:10:14.561966"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 38ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:10:14.578314"], ["updated_at", "2016-10-27 02:10:14.578314"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (3.5ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.3ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:29:00', '2016-10-27 02:29:00', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:29:00', '2016-10-27 02:29:00', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------------
+SessionsControllerTest: test_A_logged_in_user_can_see_index
+-----------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:29:00.553563"], ["updated_at", "2016-10-27 02:29:00.553563"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 40ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:29:00.569902"], ["updated_at", "2016-10-27 02:29:00.569902"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:29:00.577937"], ["updated_at", "2016-10-27 02:29:00.577937"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 0ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.5ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:45:34', '2016-10-27 02:45:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:45:34', '2016-10-27 02:45:34', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:45:34.842912"], ["updated_at", "2016-10-27 02:45:34.842912"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 36ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_cannot_see_index
+------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:45:34.860114"], ["updated_at", "2016-10-27 02:45:34.860114"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:45:56', '2016-10-27 02:45:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:45:56', '2016-10-27 02:45:56', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:45:56.248027"], ["updated_at", "2016-10-27 02:45:56.248027"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 43ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (4.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:45:56.272312"], ["updated_at", "2016-10-27 02:45:56.272312"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_cannot_see_index
+------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.4ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.3ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:46:34', '2016-10-27 02:46:34', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:46:34', '2016-10-27 02:46:34', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:46:34.408552"], ["updated_at", "2016-10-27 02:46:34.408552"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 35ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (5.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 5.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_cannot_see_index
+------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:46:34.426050"], ["updated_at", "2016-10-27 02:46:34.426050"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.5ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.5ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 02:50:13', '2016-10-27 02:50:13', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 02:50:13', '2016-10-27 02:50:13', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_cannot_see_index
+------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:50:13.283158"], ["updated_at", "2016-10-27 02:50:13.283158"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 42ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 02:50:13.299952"], ["updated_at", "2016-10-27 02:50:13.299952"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.4ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.7ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:08:20', '2016-10-27 03:08:20', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:08:20', '2016-10-27 03:08:20', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:08:20.931494"], ["updated_at", "2016-10-27 03:08:20.931494"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 36ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_cannot_see_index
+------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:08:20.949276"], ["updated_at", "2016-10-27 03:08:20.949276"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (4.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:10:03', '2016-10-27 03:10:03', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:10:03', '2016-10-27 03:10:03', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:10:03.766008"], ["updated_at", "2016-10-27 03:10:03.766008"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 26ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (8.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_cannot_see_index
+------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:10:03.788249"], ["updated_at", "2016-10-27 03:10:03.788249"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.7ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.3ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:14:55', '2016-10-27 03:14:55', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:14:55', '2016-10-27 03:14:55', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:14:55.744626"], ["updated_at", "2016-10-27 03:14:55.744626"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 39ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:14:55.758292"], ["updated_at", "2016-10-27 03:14:55.758292"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:15:07', '2016-10-27 03:15:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:15:07', '2016-10-27 03:15:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:15:07.487126"], ["updated_at", "2016-10-27 03:15:07.487126"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 33ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:15:07.503769"], ["updated_at", "2016-10-27 03:15:07.503769"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:15:26', '2016-10-27 03:15:26', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:15:26', '2016-10-27 03:15:26', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:15:26.674175"], ["updated_at", "2016-10-27 03:15:26.674175"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 34ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (6.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:15:26.693503"], ["updated_at", "2016-10-27 03:15:26.693503"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:15:41', '2016-10-27 03:15:41', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:15:41', '2016-10-27 03:15:41', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:15:41.776498"], ["updated_at", "2016-10-27 03:15:41.776498"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 33ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:15:41.802140"], ["updated_at", "2016-10-27 03:15:41.802140"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:24:45', '2016-10-27 03:24:45', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:24:45', '2016-10-27 03:24:45', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:24:45.473319"], ["updated_at", "2016-10-27 03:24:45.473319"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 34ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+SessionsControllerTest: test_logging_out_
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:24:45.493018"], ["updated_at", "2016-10-27 03:24:45.493018"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (2.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (2.3ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:31:48', '2016-10-27 03:31:48', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:31:48', '2016-10-27 03:31:48', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:31:48.455261"], ["updated_at", "2016-10-27 03:31:48.455261"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 39ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:31:48.471278"], ["updated_at", "2016-10-27 03:31:48.471278"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+SessionsControllerTest: test_logging_out_nils_the_current_user
+--------------------------------------------------------------
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:31:48.477835"], ["updated_at", "2016-10-27 03:31:48.477835"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:32:54', '2016-10-27 03:32:54', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:32:54', '2016-10-27 03:32:54', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:32:54.365913"], ["updated_at", "2016-10-27 03:32:54.365913"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 15ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:32:54.380683"], ["updated_at", "2016-10-27 03:32:54.380683"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+SessionsControllerTest: test_logging_out_nils_the_current_user
+--------------------------------------------------------------
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:32:54.387690"], ["updated_at", "2016-10-27 03:32:54.387690"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1328ms (Views: 1327.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (3.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:35:20', '2016-10-27 03:35:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:35:20', '2016-10-27 03:35:20', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:35:20.648089"], ["updated_at", "2016-10-27 03:35:20.648089"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 18ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:35:20.662833"], ["updated_at", "2016-10-27 03:35:20.662833"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:35:20.670026"], ["updated_at", "2016-10-27 03:35:20.670026"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 296ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (3.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+SessionsControllerTest: test_logging_out_nils_the_current_user
+--------------------------------------------------------------
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:35:20.977312"], ["updated_at", "2016-10-27 03:35:20.977312"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tasks"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2016-09-28', '2016-10-27 03:36:03', '2016-10-27 03:36:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tasks" ("name", "description", "completed_at", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', NULL, '2016-10-27 03:36:03', '2016-10-27 03:36:03', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SessionsControllerTest: test_Can_Create_a_user
+----------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:36:03.792000"], ["updated_at", "2016-10-27 03:36:03.792000"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 12ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+--------------------------------------------------------------
+SessionsControllerTest: test_logging_out_nils_the_current_user
+--------------------------------------------------------------
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:36:03.805616"], ["updated_at", "2016-10-27 03:36:03.805616"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 186ms (Views: 186.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+SessionsControllerTest: test_A_non-logged-in_user_is_redirected_to_login_path
+-----------------------------------------------------------------------------
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1[0m  [["uid", 123545], ["provider", "github"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:36:03.999242"], ["updated_at", "2016-10-27 03:36:03.999242"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Processing by SessionsController#logout as HTML
+  Rendered sessions/logout.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+SessionsControllerTest: test_If_a_user_logs_in_twice_it_doesn't_create_a_2nd_user
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("uid", "provider", "name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 123545], ["provider", "github"], ["name", "Ada"], ["email", "a@b.com"], ["created_at", "2016-10-27 03:36:04.008558"], ["updated_at", "2016-10-27 03:36:04.008558"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"github"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", 123545], ["provider", "github"]]
+Redirected to http://test.host/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (2.2ms)[0m  rollback transaction

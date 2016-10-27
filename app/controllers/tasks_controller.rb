@@ -11,7 +11,7 @@ class TasksController < ApplicationController
 
   def show; end
 
-  ##### NEW CREATE #############################################
+  ##### NEW CREATE ################################
   def new
     @task = Task.new
   end
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     end
   end
 
-  ##### EDIT UPDATE #############################################
+  ##### EDIT UPDATE ###############################
   def edit; end
 
   def update
@@ -43,13 +43,13 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
-  #####  DESTROY  ###############################################
+  #####  DESTROY  #################################
   def destroy
     @task = Task.find(params[:id]).destroy
     redirect_to tasks_path
   end
 
-  ###################### PRIVATE ##############################
+  ###################### PRIVATE ###################
 
   private
 
